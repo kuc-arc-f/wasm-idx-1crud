@@ -6,7 +6,7 @@
 
  date    : 2020/09/08 
 
- update :
+ update : 2020/09/09
 
 ***
 
@@ -21,7 +21,7 @@ wasm-pack build
 
 npm init wasm-app www
 
-mp, install
+npm install
 
 
 ***
