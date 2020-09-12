@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-// import IndexRow from './IndexRow';
 import Dexie from 'dexie';
 import LibTask from '../../libs/LibTask';
 import LibDexie from '../../libs/LibDexie';
@@ -47,11 +46,9 @@ class Index extends Component {
     }
     tabRow(){
         if(this.state.data instanceof Array){
-            return this.state.data.map(function(object, i){
-//console.log( object )
-                var json = JSON.stringify( object );
-                wasm.wasm_task_row("div_post_wrap", String(json) );
-            })
+            var json = JSON.stringify( this.state.data);
+//console.log( json )
+                wasm.wasm_task_disp("div_post_wrap", String(json) );
         }
     }
     render(){
